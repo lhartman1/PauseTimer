@@ -41,18 +41,28 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    Widget durationPicker = DurationPicker(
+      duration: _duration,
+      onChange: (val) {
+        setState(() => _duration = val);
+      },
+    );
+
+    // While a pause timer is active, make the durationPicker "inactive".
+    if (_pauseTimer != null) {
+      durationPicker = AbsorbPointer(
+        child: Theme(
+          data: ThemeData(primarySwatch: Colors.grey),
+          child: durationPicker,
+        ),
+      );
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: DurationPicker(
-          duration: _duration,
-          onChange: (val) {
-            setState(() => _duration = val);
-          },
-        ),
-      ),
+      body: Center(child: durationPicker),
       floatingActionButton: _pauseTimer == null
           ? FloatingActionButton.extended(
               onPressed: () => createMediaPauseTimer(context, _duration),
