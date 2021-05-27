@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
     if (_pauseTimer != null) {
       durationPicker = AbsorbPointer(
         child: Theme(
-          data: ThemeData(primarySwatch: Colors.grey),
+          data: Theme.of(context).copyWith(accentColor: Colors.grey),
           child: durationPicker,
         ),
       );
