@@ -17,7 +17,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Pause Timer',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        accentColor: Colors.green,
       ),
       home: MyHomePage(title: 'Pause Timer'),
     );
