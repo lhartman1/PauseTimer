@@ -1,16 +1,3 @@
-# pause_timer
+# Pause Timer
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Some apps, like [Netflix](https://help.netflix.com/en/node/2102), make it very difficult to disable autoplay. This app aims to solve that by letting the user create a timer that will pause whatever video or audio is playing. This doesn't precisely solve the problem of stopping playback exactly when the current episode is over (unless you very carefully time it), but it does help prevent the app from playing for hours on end when you fall asleep.
