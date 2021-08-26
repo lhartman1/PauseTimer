@@ -31,7 +31,11 @@ dependencies:
   flutter_background: ^1.0.0
   synchronized: ^3.0.0
   audio_session: ^0.1.0
-  duration_picker: ^1.0.1
+  # This is needed until there is a release after 1.0.1 for duration_picker
+  duration_picker:
+    git:
+      url: https://github.com/juliansteenbakker/duration_picker
+      ref: 252dee3e7a24c5006409295e0c28ec19cede9d62
   intl: ^0.17.0
 
 dev_dependencies:

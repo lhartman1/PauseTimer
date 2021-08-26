@@ -14,7 +14,7 @@ packages:
       name: audio_session
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.1.0"
+    version: "0.1.6"
   boolean_selector:
     dependency: transitive
     description:
@@ -60,9 +60,11 @@ packages:
   duration_picker:
     dependency: "direct main"
     description:
-      name: duration_picker
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "."
+      ref: "252dee3e7a24c5006409295e0c28ec19cede9d62"
+      resolved-ref: "252dee3e7a24c5006409295e0c28ec19cede9d62"
+      url: "https://github.com/juliansteenbakker/duration_picker"
+    source: git
     version: "1.0.1"
   fake_async:
     dependency: transitive
@@ -82,7 +84,14 @@ packages:
       name: flutter_background
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0"
+    version: "1.0.2+1"
+  flutter_lints:
+    dependency: transitive
+    description:
+      name: flutter_lints
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.4"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -107,6 +116,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.3"
+  lints:
+    dependency: transitive
+    description:
+      name: lints
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.1"
   matcher:
     dependency: transitive
     description:
@@ -128,20 +144,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.0"
-  pedantic:
-    dependency: transitive
-    description:
-      name: pedantic
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.11.0"
   rxdart:
     dependency: transitive
     description:
       name: rxdart
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.26.0"
+    version: "0.27.1"
   sky_engine:
     dependency: transitive
     description: flutter
