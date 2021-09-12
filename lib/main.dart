@@ -8,10 +8,12 @@ import 'package:synchronized/synchronized.dart';
 import 'package:duration_picker/duration_picker.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,6 +23,9 @@ class MyApp extends StatelessWidget {
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
+        // Continue to use deprecated "accentColor" as needed by the
+        // duration_picker package.
+        // ignore: deprecated_member_use
         accentColor: Colors.green,
       ),
       home: MyHomePage(title: 'Pause Timer'),
@@ -56,6 +61,9 @@ class _MyHomePageState extends State<MyHomePage> {
     if (_pauseTimer != null) {
       durationPicker = AbsorbPointer(
         child: Theme(
+          // Continue to use deprecated "accentColor" as needed by the
+          // duration_picker package.
+          // ignore: deprecated_member_use
           data: Theme.of(context).copyWith(accentColor: Colors.grey),
           child: durationPicker,
         ),
@@ -70,13 +78,13 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: _pauseTimer == null
           ? FloatingActionButton.extended(
               onPressed: () => createMediaPauseTimer(context, _duration),
-              label: Text('Start Pause Timer'),
-              icon: Icon(Icons.schedule),
+              label: const Text('Start Pause Timer'),
+              icon: const Icon(Icons.schedule),
             )
           : FloatingActionButton.extended(
               onPressed: cancelMediaPauseTimer,
-              label: Text('Stop Pause Timer'),
-              icon: Icon(Icons.stop),
+              label: const Text('Stop Pause Timer'),
+              icon: const Icon(Icons.stop),
             ),
     );
   }
@@ -99,10 +107,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void showErrorSnackBar(BuildContext context) {
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
+      const SnackBar(
         content:
             Text('Background permission must be granted. Please try again.'),
-        duration: const Duration(seconds: 5),
+        duration: Duration(seconds: 5),
       ),
     );
   }
